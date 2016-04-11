@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartPageViewController" customModule="ExtendedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-jR-Oqq">
+                                <rect key="frame" x="20" y="50" width="560" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="GYD-Ne-UgS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTC-2i-9HD">
+                                <rect key="frame" x="20" y="169" width="560" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="h9z-ev-eux"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH9-kb-wq8">
+                                <rect key="frame" x="20" y="509" width="560" height="63"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.85490196080000003" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Lob-gf-PxE"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bottomButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDD-mY-HKi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aH9-kb-wq8" secondAttribute="bottom" constant="28" id="0q6-o2-Fu8"/>
+                            <constraint firstItem="aH9-kb-wq8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3s8-GE-TLF"/>
+                            <constraint firstItem="MDI-jR-Oqq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5aY-Oo-E8T"/>
+                            <constraint firstItem="aH9-kb-wq8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="E43-UM-ofG"/>
+                            <constraint firstItem="FTC-2i-9HD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ITY-Sy-hNY"/>
+                            <constraint firstItem="MDI-jR-Oqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J51-Hv-juj"/>
+                            <constraint firstItem="FTC-2i-9HD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mm2-vk-OTn"/>
+                            <constraint firstItem="MDI-jR-Oqq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="NgE-x8-QSE"/>
+                            <constraint firstItem="FTC-2i-9HD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iTk-J6-dtB"/>
+                            <constraint firstItem="FTC-2i-9HD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qcx-iV-A6x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomButton" destination="aH9-kb-wq8" id="kCU-ap-Vzs"/>
+                        <outlet property="header" destination="MDI-jR-Oqq" id="rYL-ke-YRF"/>
+                        <outlet property="textLabel" destination="FTC-2i-9HD" id="EmU-R3-z3E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="429"/>
+        </scene>
+    </scenes>
+</document>
